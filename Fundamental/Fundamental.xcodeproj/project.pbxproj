@@ -13,6 +13,8 @@
 		B33A15F929FBC12E00AD5732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33A15F729FBC12E00AD5732 /* Main.storyboard */; };
 		B33A15FB29FBC12E00AD5732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33A15FA29FBC12E00AD5732 /* Assets.xcassets */; };
 		B33A15FE29FBC12E00AD5732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33A15FC29FBC12E00AD5732 /* LaunchScreen.storyboard */; };
+		B33A164C29FBC2A700AD5732 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B33A164B29FBC2A700AD5732 /* Person.m */; };
+		B35A54E52A62A7DD0049F180 /* Alloc.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A54E42A62A7DD0049F180 /* Alloc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,11 @@
 		B33A15FA29FBC12E00AD5732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B33A15FD29FBC12E00AD5732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B33A15FF29FBC12E00AD5732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B33A164929FBC2A700AD5732 /* Fundamental-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fundamental-Bridging-Header.h"; sourceTree = "<group>"; };
+		B33A164A29FBC2A700AD5732 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		B33A164B29FBC2A700AD5732 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		B35A54E32A62A7DD0049F180 /* Alloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Alloc.h; sourceTree = "<group>"; };
+		B35A54E42A62A7DD0049F180 /* Alloc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Alloc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +68,7 @@
 				B33A15F129FBC12E00AD5732 /* AppDelegate.swift */,
 				B33A15F329FBC12E00AD5732 /* SceneDelegate.swift */,
 				B33A15F529FBC12E00AD5732 /* ViewController.swift */,
+				B33A164929FBC2A700AD5732 /* Fundamental-Bridging-Header.h */,
 				B33A15F729FBC12E00AD5732 /* Main.storyboard */,
 				B33A15FA29FBC12E00AD5732 /* Assets.xcassets */,
 				B33A15FC29FBC12E00AD5732 /* LaunchScreen.storyboard */,
@@ -72,6 +80,7 @@
 		B33A160529FBC13F00AD5732 /* Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				B33A160829FBC1DC00AD5732 /* 001-Object */,
 			);
 			path = "Objective-C";
 			sourceTree = "<group>";
@@ -81,6 +90,17 @@
 			children = (
 			);
 			path = Swift;
+			sourceTree = "<group>";
+		};
+		B33A160829FBC1DC00AD5732 /* 001-Object */ = {
+			isa = PBXGroup;
+			children = (
+				B33A164A29FBC2A700AD5732 /* Person.h */,
+				B33A164B29FBC2A700AD5732 /* Person.m */,
+				B35A54E32A62A7DD0049F180 /* Alloc.h */,
+				B35A54E42A62A7DD0049F180 /* Alloc.m */,
+			);
+			path = "001-Object";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +135,7 @@
 				TargetAttributes = {
 					B33A15ED29FBC12E00AD5732 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -155,7 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B33A15F629FBC12E00AD5732 /* ViewController.swift in Sources */,
+				B35A54E52A62A7DD0049F180 /* Alloc.m in Sources */,
 				B33A15F229FBC12E00AD5732 /* AppDelegate.swift in Sources */,
+				B33A164C29FBC2A700AD5732 /* Person.m in Sources */,
 				B33A15F429FBC12E00AD5732 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +324,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MC4ML6FGRD;
@@ -319,6 +343,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lmqleo.StudyNotes.Fundamental;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Fundamental/Fundamental-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -329,6 +355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MC4ML6FGRD;
@@ -347,6 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lmqleo.StudyNotes.Fundamental;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Fundamental/Fundamental-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
