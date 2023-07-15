@@ -31,7 +31,7 @@
 	int a = 10;
 	int b = 20;
 	int c = [self sum:a with:b];
-	NSLog(@"查看编译器优化情况:%d",c);
+	NSLog(@"查看编译器优化情况:%d", c);
 }
 
 // 加法

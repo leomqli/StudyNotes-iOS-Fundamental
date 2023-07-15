@@ -11,9 +11,18 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		
+		// Alloc流程
+		let alloc = Alloc()
+		alloc.test()
+		alloc.testNew()
+		alloc.testOptimizationLevel()
+		
+		// 内存
+		Memory.getStruct()
+		Memory.getHEX()
+		Memory.getPerson()
 	}
-
-
+	
 }
 
